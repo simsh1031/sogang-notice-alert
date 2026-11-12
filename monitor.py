@@ -191,9 +191,14 @@ def send_discord(post=None, test=False):
                 "users": ["981509005547552808"]
             }
         }
+    
     else:
         payload = {
             "username": "서강대 학사공지 알리미",
+            "content": "<@981509005547552808> 📢 새로운 학사공지가 등록되었습니다!",
+            "allowed_mentions": {
+                "users": ["981509005547552808"]
+            },
             "embeds": [
                 {
                     "title": post["title"][:256],
@@ -213,6 +218,7 @@ def send_discord(post=None, test=False):
                 }
             ],
         }
+
 
     # 일시적 실패에 한해 재시도
     for attempt in range(3):
