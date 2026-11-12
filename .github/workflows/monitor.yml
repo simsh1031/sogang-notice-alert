@@ -3,7 +3,7 @@ name: Sogang Notice Monitor
 
 on:
   schedule:
-    - cron: "8,38 * * * *"
+    - cron: "15,45 * * * *"
 
   workflow_dispatch:
     inputs:
