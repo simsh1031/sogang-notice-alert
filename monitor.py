@@ -186,7 +186,10 @@ def send_discord(post=None, test=False):
 
     if test:
         payload = {
-            "content": "✅ 서강대학교 학사공지 알리미 연결 테스트 성공!"
+            "content": "<@981509005547552808> ✅ 서강대학교 학사공지 알리미 연결 테스트 성공!",
+            "allowed_mentions": {
+                "users": ["981509005547552808"]
+            }
         }
     else:
         payload = {
